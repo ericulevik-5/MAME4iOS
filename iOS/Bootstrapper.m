@@ -200,15 +200,18 @@ NSArray* g_import_file_types;
 
 	hrViewController = [[EmulatorController alloc] init];
 	
-	deviceWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // If UIApplicationSceneManifest is used, the window is created and configured in SceneDelegate
+    if ([NSBundle.mainBundle objectForInfoDictionaryKey:@"UIApplicationSceneManifest"] == nil) {
+        deviceWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 #if TARGET_OS_TV
-    deviceWindow.backgroundColor = [UIColor colorWithWhite:0.111 alpha:1.0];
-    deviceWindow.tintColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+        deviceWindow.backgroundColor = [UIColor colorWithWhite:0.111 alpha:1.0];
+        deviceWindow.tintColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
 #endif
-    [deviceWindow setRootViewController:hrViewController];
-    
-    [hrViewController startEmulation];
-	[deviceWindow makeKeyAndVisible];
+        [deviceWindow setRootViewController:hrViewController];
+        
+        [hrViewController startEmulation];
+        [deviceWindow makeKeyAndVisible];
+    }
         
     [UIApplication sharedApplication].idleTimerDisabled = YES;
 	 
@@ -444,6 +447,103 @@ NSArray* g_import_file_types;
         externalWindow.subviews.firstObject.frame = externalWindow.bounds;
         [hrViewController performSelectorOnMainThread:@selector(changeUI) withObject:nil waitUntilDone:NO];
     }
+}
+#endif
+
+#pragma mark - UISceneSession lifecycle
+
+- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options API_AVAILABLE(ios(13.0), tvos(13.0)) {
+    UISceneConfiguration *config = [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+    config.delegateClass = [SceneDelegate class];
+    return config;
+}
+
+- (void)configureWithWindow:(UIWindow *)window scene:(UIWindowScene *)windowScene options:(UISceneConnectionOptions *)connectionOptions API_AVAILABLE(ios(13.0), tvos(13.0)) {
+    deviceWindow = window;
+    self.window = window;
+#if TARGET_OS_TV
+    deviceWindow.backgroundColor = [UIColor colorWithWhite:0.111 alpha:1.0];
+    deviceWindow.tintColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+#endif
+    [deviceWindow setRootViewController:hrViewController];
+    [hrViewController startEmulation];
+    
+    // Check if launched with a URL
+    for (UIOpenURLContext *context in connectionOptions.URLContexts) {
+        [self application:UIApplication.sharedApplication openURL:context.URL options:@{
+            UIApplicationOpenURLOptionsOpenInPlaceKey: @(context.options.openInPlace)
+        }];
+    }
+    
+    // Check user activities
+    for (NSUserActivity *activity in connectionOptions.userActivities) {
+        [self application:UIApplication.sharedApplication continueUserActivity:activity restorationHandler:^(NSArray<id<UIUserActivityRestoring>> *restorableObjects) {}];
+    }
+    
+#if TARGET_OS_IOS
+    // Check shortcut item
+    if (connectionOptions.shortcutItem) {
+        [self application:UIApplication.sharedApplication performActionForShortcutItem:connectionOptions.shortcutItem completionHandler:^(BOOL succeeded) {}];
+    }
+#endif
+}
+
+@end
+
+#pragma mark - SceneDelegate
+
+@implementation SceneDelegate
+
+- (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions API_AVAILABLE(ios(13.0), tvos(13.0)) {
+    if (![scene isKindOfClass:[UIWindowScene class]])
+        return;
+    
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    
+    Bootstrapper *appDelegate = (Bootstrapper *)UIApplication.sharedApplication.delegate;
+    [appDelegate configureWithWindow:self.window scene:windowScene options:connectionOptions];
+    
+    [self.window makeKeyAndVisible];
+}
+
+- (void)sceneDidDisconnect:(UIScene *)scene API_AVAILABLE(ios(13.0), tvos(13.0)) {
+}
+
+- (void)sceneDidBecomeActive:(UIScene *)scene API_AVAILABLE(ios(13.0), tvos(13.0)) {
+}
+
+- (void)sceneWillResignActive:(UIScene *)scene API_AVAILABLE(ios(13.0), tvos(13.0)) {
+}
+
+- (void)sceneWillEnterForeground:(UIScene *)scene API_AVAILABLE(ios(13.0), tvos(13.0)) {
+    Bootstrapper *appDelegate = (Bootstrapper *)UIApplication.sharedApplication.delegate;
+    [appDelegate applicationWillEnterForeground:UIApplication.sharedApplication];
+}
+
+- (void)sceneDidEnterBackground:(UIScene *)scene API_AVAILABLE(ios(13.0), tvos(13.0)) {
+    Bootstrapper *appDelegate = (Bootstrapper *)UIApplication.sharedApplication.delegate;
+    [appDelegate applicationDidEnterBackground:UIApplication.sharedApplication];
+}
+
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts API_AVAILABLE(ios(13.0), tvos(13.0)) {
+    Bootstrapper *appDelegate = (Bootstrapper *)UIApplication.sharedApplication.delegate;
+    for (UIOpenURLContext *context in URLContexts) {
+        [appDelegate application:UIApplication.sharedApplication openURL:context.URL options:@{
+            UIApplicationOpenURLOptionsOpenInPlaceKey: @(context.options.openInPlace)
+        }];
+    }
+}
+
+- (void)scene:(UIScene *)scene continueUserActivity:(NSUserActivity *)userActivity API_AVAILABLE(ios(13.0), tvos(13.0)) {
+    Bootstrapper *appDelegate = (Bootstrapper *)UIApplication.sharedApplication.delegate;
+    [appDelegate application:UIApplication.sharedApplication continueUserActivity:userActivity restorationHandler:^(NSArray<id<UIUserActivityRestoring>> *restorableObjects) {}];
+}
+
+#if TARGET_OS_IOS
+- (void)windowScene:(UIWindowScene *)windowScene performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler API_AVAILABLE(ios(13.0)) {
+    Bootstrapper *appDelegate = (Bootstrapper *)UIApplication.sharedApplication.delegate;
+    [appDelegate application:UIApplication.sharedApplication performActionForShortcutItem:shortcutItem completionHandler:completionHandler];
 }
 #endif
 

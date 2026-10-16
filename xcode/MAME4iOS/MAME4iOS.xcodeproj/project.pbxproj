@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A11157000000000000000B1 /* GameList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A11157000000000000000A2 /* GameList.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		6A11157000000000000000B2 /* GameList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A11157000000000000000A2 /* GameList.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		6A11157000000000000000B3 /* GameList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A11157000000000000000A2 /* GameList.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		920BBDEF201FC29700AE7D50 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 920BBDED201FC29700AE7D50 /* dpad.png */; };
 		920BBDF220210C3800AE7D50 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 920BBDF020210C3700AE7D50 /* menu.png */; };
 		920D975A2BCECB410038F00B /* UICollectionView+ZeroState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97592BCECB410038F00B /* UICollectionView+ZeroState.swift */; };
@@ -200,6 +203,9 @@
 		92F623872C88D81A00E2579B /* SKIN_1 in Resources */ = {isa = PBXBuildFile; fileRef = EF1C93E124C252C400749C69 /* SKIN_1 */; };
 		92F623882C88D81A00E2579B /* iCadeControls.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA757212408488D00A02AAB /* iCadeControls.png */; };
 		92F623892C88D81A00E2579B /* help.md in Resources */ = {isa = PBXBuildFile; fileRef = EF1C93E324C252C400749C69 /* help.md */; };
+		A77AC7D00000000000000B01 /* AttractMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AC7D00000000000000A02 /* AttractMode.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		A77AC7D00000000000000B02 /* AttractMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AC7D00000000000000A02 /* AttractMode.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		A77AC7D00000000000000B03 /* AttractMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AC7D00000000000000A02 /* AttractMode.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B5FAE31921FCE64D003F44D0 /* MAME_tvOS.lsr in Resources */ = {isa = PBXBuildFile; fileRef = B5FAE31821FCE64D003F44D0 /* MAME_tvOS.lsr */; };
 		E9856CF023C9A7C50071666D /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9856CEF23C9A7C50071666D /* MultipeerConnectivity.framework */; };
 		EF08EB32277A937900E4D455 /* plugins.zip in Resources */ = {isa = PBXBuildFile; fileRef = EF08EB31277A937900E4D455 /* plugins.zip */; };
@@ -209,12 +215,6 @@
 		EF1741D7261BB2D600DE8386 /* GameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1741D5261BB2D600DE8386 /* GameInfo.m */; };
 		EF1741D9261BB2D600DE8386 /* GameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1741D5261BB2D600DE8386 /* GameInfo.m */; };
 		EF19F22C235D1BDF00C8EE7F /* ChooseGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19F229235D1BDF00C8EE7F /* ChooseGameController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		A77AC7D00000000000000B01 /* AttractMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AC7D00000000000000A02 /* AttractMode.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		6A11157000000000000000B1 /* GameList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A11157000000000000000A2 /* GameList.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		6A11157000000000000000B2 /* GameList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A11157000000000000000A2 /* GameList.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		6A11157000000000000000B3 /* GameList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A11157000000000000000A2 /* GameList.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		A77AC7D00000000000000B02 /* AttractMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AC7D00000000000000A02 /* AttractMode.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		A77AC7D00000000000000B03 /* AttractMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AC7D00000000000000A02 /* AttractMode.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		EF19F22D235D1BDF00C8EE7F /* ChooseGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19F229235D1BDF00C8EE7F /* ChooseGameController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		EF1C93EE24C252C600749C69 /* SKIN_1 in Resources */ = {isa = PBXBuildFile; fileRef = EF1C93E124C252C400749C69 /* SKIN_1 */; };
 		EF1C93F424C252C600749C69 /* help.md in Resources */ = {isa = PBXBuildFile; fileRef = EF1C93E324C252C400749C69 /* help.md */; };
@@ -438,6 +438,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A11157000000000000000A1 /* GameList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameList.h; sourceTree = "<group>"; };
+		6A11157000000000000000A2 /* GameList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameList.m; sourceTree = "<group>"; };
 		920BBDED201FC29700AE7D50 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dpad.png; path = "../../iOS-res/dpad.png"; sourceTree = "<group>"; };
 		920BBDF020210C3700AE7D50 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = "../../iOS-res/menu.png"; sourceTree = "<group>"; };
 		920D97592BCECB410038F00B /* UICollectionView+ZeroState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ZeroState.swift"; sourceTree = "<group>"; };
@@ -511,6 +513,8 @@
 		92F623172C88D3F500E2579B /* LaunchArcadeMania.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchArcadeMania.storyboard; sourceTree = "<group>"; };
 		92F623902C88D81A00E2579B /* ArcadeMania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcadeMania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F623912C88D81A00E2579B /* ArcadeMania.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ArcadeMania.plist; path = /Users/yoshi/Code/personal/MAME4iOS/xcode/MAME4iOS/ArcadeMania.plist; sourceTree = "<absolute>"; };
+		A77AC7D00000000000000A01 /* AttractMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttractMode.h; sourceTree = "<group>"; };
+		A77AC7D00000000000000A02 /* AttractMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttractMode.m; sourceTree = "<group>"; };
 		B370F8AF1C8549010069377D /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		B5FAE31821FCE64D003F44D0 /* MAME_tvOS.lsr */ = {isa = PBXFileReference; lastKnownFileType = file; path = MAME_tvOS.lsr; sourceTree = "<group>"; };
 		CE6D6E1216D8CADF00F265B7 /* LayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayoutView.h; path = ../../iOS/LayoutView.h; sourceTree = "<group>"; };
@@ -553,10 +557,6 @@
 		EF1741D4261BB2D600DE8386 /* GameInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameInfo.h; sourceTree = "<group>"; };
 		EF1741D5261BB2D600DE8386 /* GameInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameInfo.m; sourceTree = "<group>"; };
 		EF19F229235D1BDF00C8EE7F /* ChooseGameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseGameController.m; sourceTree = "<group>"; };
-		A77AC7D00000000000000A01 /* AttractMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttractMode.h; sourceTree = "<group>"; };
-		A77AC7D00000000000000A02 /* AttractMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttractMode.m; sourceTree = "<group>"; };
-		6A11157000000000000000A1 /* GameList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameList.h; sourceTree = "<group>"; };
-		6A11157000000000000000A2 /* GameList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameList.m; sourceTree = "<group>"; };
 		EF19F22E235D1C0300C8EE7F /* ChooseGameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseGameController.h; sourceTree = "<group>"; };
 		EF1C93E124C252C400749C69 /* SKIN_1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SKIN_1; path = "../../iOS-res/SKIN_1"; sourceTree = "<group>"; };
 		EF1C93E324C252C400749C69 /* help.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = help.md; path = "../../iOS-res/help.md"; sourceTree = "<group>"; };
@@ -1252,19 +1252,16 @@
 				ORGANIZATIONNAME = "MAME4iOS Team";
 				TargetAttributes = {
 					925ABCA41E46DCC500997182 = {
-						DevelopmentTeam = ABC8675309;
 						LastSwiftMigration = 1320;
 						ProvisioningStyle = Automatic;
 					};
 					92ECB8EA21EA984D00D1E3D0 = {
 						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = ABC8675309;
 						LastSwiftMigration = 1320;
 						ProvisioningStyle = Automatic;
 					};
 					EFEEA4B025C9D41E00314132 = {
 						CreatedOnToolsVersion = 12.4;
-						DevelopmentTeam = ABC8675309;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1683,6 +1680,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G9LJSZCWH;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MAME4iOS/MAME4iOS-Prefix.pch";
@@ -1703,6 +1701,7 @@
 					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.ulevik.mame4ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1724,6 +1723,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G9LJSZCWH;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MAME4iOS/MAME4iOS-Prefix.pch";
@@ -1786,6 +1786,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2G9LJSZCWH;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1808,6 +1809,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulevik.mame4ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -1855,6 +1857,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2G9LJSZCWH;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1877,6 +1880,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulevik.mame4ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -1897,6 +1901,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MAME4iOS/MAME4iOS$(ENTITLEMENTS_TYPE).entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G9LJSZCWH;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MAME4iOS/MAME4iOS-Prefix.pch";
@@ -1917,7 +1922,7 @@
 					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yoshisuga.mame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulevik.mame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1941,6 +1946,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MAME4iOS/MAME4iOS$(ENTITLEMENTS_TYPE).entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G9LJSZCWH;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MAME4iOS/MAME4iOS-Prefix.pch";
@@ -1957,7 +1963,7 @@
 					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yoshisuga.mame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulevik.mame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2017,7 +2023,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
@@ -2069,7 +2075,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
@@ -2101,6 +2107,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2G9LJSZCWH;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -2138,6 +2145,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2G9LJSZCWH;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;

@@ -43,12 +43,24 @@
  */
 
 #import "EmulatorController.h"
-#import <UIKit/UIScreen.h>
+#import <UIKit/UIKit.h>
 
 @interface Bootstrapper : UIResponder <UIApplicationDelegate>  {
+@public
 	UIWindow		    *deviceWindow;
 	UIWindow            *externalWindow;
 	EmulatorController	*hrViewController;
 }
+
+@property (strong, nonatomic) UIWindow *window;
+
+- (void)configureWithWindow:(UIWindow *)window scene:(UIWindowScene *)windowScene options:(UISceneConnectionOptions *)connectionOptions API_AVAILABLE(ios(13.0), tvos(13.0));
+
+@end
+
+API_AVAILABLE(ios(13.0), tvos(13.0))
+@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end
