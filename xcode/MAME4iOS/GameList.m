@@ -559,10 +559,12 @@
 #endif
 }
 
+#if !TARGET_OS_TV
 - (void)showInBrowserChanged:(UISwitch*)sender
 {
     _list.showInBrowser = sender.isOn;
 }
+#endif
 
 - (void)promptForRename
 {

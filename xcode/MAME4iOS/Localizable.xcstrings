@@ -2021,6 +2021,9 @@
         }
       }
     },
+    "Input Options" : {
+
+    },
     "Keep Aspect Ratio" : {
       "comment" : "Settings: Video Section: Aspect Ratio option",
       "localizations" : {
@@ -2125,7 +2128,7 @@
       }
     },
     "Lists" : {
-      "comment" : "Section header for game lists\nSettings: Lists section row\nSettings: the Lists screen",
+      "comment" : "Settings: the Lists screen",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
